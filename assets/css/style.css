@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*     NEWS     */
+
+.news *{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.news{
+    max-width: 1440px;
+    margin: 0 auto;    
+    padding: 0;
+    padding-top: 80px;
+}
+
+.news .row-news{    
+    margin: 0 130px;
+    max-width: 1180px;    
+    padding: 0;    
+    display: flex;
+    justify-content: space-between;    
+}
+
+.news .topic-news{
+    padding: 0;
+}
+
+.news .topic-news h3 {
+	font-size: 28px;
+    color: #0e2d6e;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: normal;
+    font-style: normal;
+}
+
+.news .news-search h6{
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-align: right;
+    color: #505050;
+}
+
+.news .news-wave{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 10px;
+    padding-bottom: 30px;
+    
+}
+
+.news .wave1, .news .wave3, .news .wave5, .news  .wave7{
+    padding: 0;
+    margin: 0;    
+    height: 16px;    
+    border-left: 5px solid #f78164;
+    transform: skewX(40deg);   
+    opacity: 0.2;
+}
+
+.news .wave3,.news .wave5,.news  .wave7{
+    margin-left: 8px;
+}
+
+
+.news .wave2,.news .wave4,.news .wave6{
+    padding: 0;
+    margin: 0;    
+    height: 16px;    
+    border-left: 5px solid #f78164;
+    transform: skewX(-40deg);   
+    margin-left: 8px;
+    opacity: 0.2;
+}
+
+.news .box0{    
+    padding: 0;
+    margin-bottom: 20px;    
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.news .news-box11{
+    padding: 0;
+    max-width: 780px;
+    height: 380px;    
+}
+
+.news .news-box12{
+    padding: 0;
+    max-width: 380px;
+    max-height: 290px;
+    position: relative;
+    top: 0;            
+}
+
+.news .news-box21,
+.news .news-box22,
+.news .news-box23{
+    padding: 0;    
+    max-width: 380px;
+    max-height: 290px;
+    position: relative;
+    top: 0;                
+}
+
+.news .news-box23{
+    height: 380px;
+    overflow: inherit;        
+}
+
+.news .news-box23 img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;        
+    border-radius: 5px;        
+}
+
+.news .news-box31,
+.news .news-box32,
+.news .news-box33,
+.news .news-box34{
+    padding: 0;    
+    max-width: 280px;
+    max-height: 260px;
+    position: relative;
+    top: 0;            
+}
+
