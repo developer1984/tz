@@ -6,16 +6,16 @@ nav a, header a {
     color: #fff;
     text-decoration: none;
 }
-nav a:hover, header a:hover {
+nav a:hover {
     text-decoration: none;
     color: #fff;
 }
 header {
-    height: 520px;
+    height: calc(460px + 25vw);
     padding-top: 20px;
     background-image: url('../../img/dummy-683x1024-Cat.jpg');
-    background-size: 100vw;
-    background-position-y: -10px;
+    background-size: 100%;
+    background-position-y: calc(-3px - 2vw);
 }
 #menu {
     display: none;
@@ -33,28 +33,29 @@ header {
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    top: 10px;
+    top: 15px;
     left: 10px;
 }
 .logo_text {
     font-family: 'Poppins', sans-serif;
+    font-size: calc(13px + 1vw);
     display: inline-block;
     position: relative;
-    top: 0;
+    top: 5px;
     left: 14px;
 }
 .account_img {
-    width: 20px;
+    width: calc(30px + 1vw);
+    position: relative;
+    top: -2px;
 }
 .add_company {
-    margin: 0 auto;
-    padding-top: 4px;
-    width: 88px;
-    height: 27px;
+    padding: calc(9px - 1vw) calc(7px + 1vw) 0;
+    height: 31px;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 55px;
-    font-size: 13px;
+    font-size: calc(10px + 1vw);
     font-weight: 700;
     text-align: center;
     background-color: #f78164;
@@ -66,12 +67,64 @@ header {
     color: #fff
 }
 .head_title {
-    margin-top: 50px;
-    font-size: 32px;
+    margin-top: calc(45px + 8vw);
+    font-size: calc(24px + 3vw);
     font-weight: 700;
 }
 .head_descr {
-    margin-top: 40px;
-    font-size: 20px;
+    margin-top: calc(35px + 2vw);
+    font-size: calc(17px + 1vw);
     font-weight: 400;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .logo_circle {
+        width: calc(30px + 1vw);
+        height: calc(30px + 1vw);
+        top: 21px;
+        left: 18px;
+    }
+    .logo_text {
+        font-size: calc(16px + 0.5vw);
+        top: 9px;
+        left: 24px;
+    }
+    .add_company {
+        right: 18px;
+        top: 20px;
+        font-size: calc(13px + 0.5vw);
+        height: calc(30px + 1vw);
+        padding: calc(3px + 0.5vw) calc(15px + 0.5vw);
+    }
+    #menu {
+        display: block;
+        width: calc(100% - 36px);
+        list-style: none;
+        position: absolute;
+        top: calc(67px + 1.5vw);
+        left: 0;
+        margin: 0 18px;
+        padding: 0 0 4px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    #menu li {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        margin-top: 8px;
+        font-size: calc(19px + 0.5vw);
+        position: relative;
+    }
+    #menu li:nth-of-type(3), #menu li:nth-of-type(6) {
+        border: none;
+        box-shadow: none;
+    }
+    header {
+        height: calc(830px + 3vw);
+    }
+    .head_title {
+        margin-top: calc(260px + 2vw);
+    }
 }
