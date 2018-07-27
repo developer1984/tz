@@ -1,0 +1,74 @@
+nav, header {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+nav a, header a {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover, header a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+header {
+    height: 520px;
+    padding-top: 20px;
+    background-image: url('../../img/dummy-683x1024-Cat.jpg');
+    background-size: 100vw;
+    background-position-y: -10px;
+}
+#menu {
+    display: none;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+.logo_circle {
+    width: 30px;
+    height: 30px;
+    background-color: #ecad3d;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 12px;
+    left: 10px;
+}
+.logo_text {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 14px;
+}
+.account_img {
+    width: 20px;
+}
+.add_company {
+    margin: 0 auto;
+    padding-top: 9px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #f78164;
+    color: #fff;
+    border-radius: 3px;
+}
+.head_container p {
+    text-align: center;
+    color: #fff
+}
+.head_title {
+    margin-top: 70px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.head_descr {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
