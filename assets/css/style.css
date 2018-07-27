@@ -66,12 +66,12 @@ header {
     color: #fff
 }
 .head_title {
-    margin-top: 70px;
-    font-size: 28px;
+    margin-top: 50px;
+    font-size: 32px;
     font-weight: 700;
 }
 .head_descr {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 20px;
     font-weight: 400;
 }
