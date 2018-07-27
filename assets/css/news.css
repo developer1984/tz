@@ -8,7 +8,7 @@
 
 /*     NEWS     */
 
-.news *{
+.news *{    
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -20,7 +20,7 @@
     padding-bottom: 60px;
 }
 
-.row-news{    
+.row-news{       
     margin: 0 130px;
     max-width: 1180px;    
     padding: 0;    
@@ -340,4 +340,24 @@
 .news-box-content3:hover{    
     transition: 0.3s;
     background: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {    
+    .row-news{    
+        margin: 0 1%;
+        max-width: 1180px;    
+        padding: 0;    
+        display: flex;
+        justify-content: space-between;    
+    }    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+         
+    .row-news{    
+        margin: 0 6px;
+        max-width: 980px;
+    }       
+        
+    
 }
