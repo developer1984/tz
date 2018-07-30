@@ -13,6 +13,10 @@
     font-family: 'Quicksand', sans-serif;    
 }
 
+.news a{
+    text-decoration: none;
+}
+
 .news{    
     max-width: 1440px;
     height: 100%;
@@ -30,7 +34,6 @@
     padding: 0;    
     justify-content: space-between;    
     flex-wrap: wrap;
-/*    flex-direction: row;  */
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
