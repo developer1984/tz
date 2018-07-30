@@ -75,6 +75,13 @@
     -ms-flex-direction: row;
     -o-flex-direction: row;
     flex-direction: row;
+    
+}
+
+.news-search a{
+    display: flex;          
+    align-items: center;
+    align-content: center;
 }
 
 .news-search h6{
@@ -83,13 +90,29 @@
     letter-spacing: 0.4px;    
     color: #505050;    
     margin: 0;
+    transition: 0.3s;
+    display: inline-block;        
 }
+
+.news-search:hover h6{
+    transition: 0.3s;
+    color: #f78164;         
+}
+
 
 .news-search i{    
 	font-size: 25px;
     color: #f78164;    
     font-family: 'Font Awesome\ 5 Free';
     margin-left: 15px;    
+    transition: 0.3s;    
+    display: inline-block;    
+}
+
+.news-search:hover i{    
+    transition: 0.3s;
+    color: #505050;    
+    
 }
 
 .news-wave{
