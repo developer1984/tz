@@ -1,0 +1,40 @@
+
+
+
+/* ====================================================================
+//====================    SEARCH INPUT  ==============================
+//====================================================================*/
+#searchField{
+  width: 525px ;  
+  margin: 20px;
+}
+input[id=searchInput]:focus{ 
+  box-shadow: none;  
+}  
+#searchButton:focus{ 
+  box-shadow: none;  
+}  
+input[id=searchInput]{ 
+  height: 75px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;  
+  /* color: #2d2d2d; */
+  /* background-color: #ffffff;   */
+}  
+#searchButton{
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius:  0 5px 5px 0;
+  background-color: #219cd2;
+}
+#searchButton .fa-search{ 
+  font-size: 30px
+}
+/* ====================================================================
+//====================    SEARCH INPUT  ==============================
+//=================================================================== */
+
+
+
