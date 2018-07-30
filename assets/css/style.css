@@ -20,47 +20,55 @@ header {
 #menu {
     display: none;
 }
-.logo {
+.left_flex {
     position: absolute;
     top: 0;
     left: 0;
     color: #fff;
 }
 .logo_circle {
-    width: 30px;
-    height: 30px;
+    width: calc(27px + 1.5vw);
+    height: calc(27px + 1.5vw);
     background-color: #ecad3d;
     border-radius: 50%;
     display: inline-block;
     position: relative;
     top: 15px;
-    left: 10px;
+    left: calc(7px + 1vw);
 }
 .logo_text {
     font-family: 'Poppins', sans-serif;
     font-size: calc(13px + 1vw);
     display: inline-block;
     position: relative;
-    top: 5px;
-    left: 14px;
+    top: calc(5px - 0.33vw);
+    left: calc(8px + 1.8vw);
 }
 .account_img {
     width: calc(30px + 1vw);
     position: relative;
     top: -2px;
 }
+.account_text {
+    display: inline-block;
+}
 .add_company {
-    padding: calc(9px - 1vw) calc(7px + 1vw) 0;
-    height: 31px;
+    padding: 0 calc(7px + 1vw);
+    height: calc(27px + 1.5vw);
     position: absolute;
     top: 15px;
-    right: 55px;
+    right: calc(48.5px + 3.5vw);
     font-size: calc(10px + 1vw);
     font-weight: 700;
     text-align: center;
     background-color: #f78164;
     color: #fff;
     border-radius: 3px;
+    display: table;
+}
+.add_company a {
+    display: table-cell;
+    vertical-align: middle;
 }
 .head_container p {
     text-align: center;
@@ -77,54 +85,93 @@ header {
     font-weight: 400;
 }
 
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 997px) {
+    #menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .right_flex, .left_flex {
+        display: flex;
+        position: unset;
+        align-items: baseline;
+        border: 1px solid red;
+    }
+    .left_flex {
+        align-content: center
+    }
+    .main_flex {
+        display: flex;
+        align-items: baseline;
+        position: absolute;
+        top: 17px;
+        left: 0;
+        width: 98%;
+        margin-left: 1%;
+        justify-content: space-between;
+    }
+    .main_flex p {
+        padding: 0;
+        margin: 0;
+    }
     .logo_circle {
-        width: calc(30px + 1vw);
-        height: calc(30px + 1vw);
-        top: 21px;
-        left: 18px;
+        width: 40px;
+        height: 40px;
+        position: unset;
     }
     .logo_text {
-        font-size: calc(16px + 0.5vw);
-        top: 9px;
-        left: 24px;
+        font-size: 20px;
+        position: unset;
+        margin-left: 60px;
     }
     .add_company {
-        right: 18px;
-        top: 20px;
-        font-size: calc(13px + 0.5vw);
+        position: unset;
+        display: flex;
+        font-size: 16px;
         height: calc(30px + 1vw);
         padding: calc(3px + 0.5vw) calc(15px + 0.5vw);
     }
-    #menu {
-        display: block;
-        width: calc(100% - 36px);
-        list-style: none;
-        position: absolute;
-        top: calc(67px + 1.5vw);
-        left: 0;
-        margin: 0 18px;
-        padding: 0 0 4px;
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-    }
     #menu li {
-        float: left;
-        width: 33.3%;
         text-align: center;
-        margin-top: 8px;
-        font-size: calc(19px + 0.5vw);
+        font-size: 18px;
+        border: 1px solid yellow;
+    }
+    .account_img {
+        width: 30px;
+    }
+    .margin_right_li {
+        margin-right: 18px;
+    }
+    .contact_li {
+        padding-right: 14px;
         position: relative;
     }
-    #menu li:nth-of-type(3), #menu li:nth-of-type(6) {
-        border: none;
-        box-shadow: none;
+    .contact_li::after {
+        display: inline-block;
+        content: '';
+        height: 31px;
+        border-right: 1px solid #d8d8d8;
+        position: absolute;
+        top: 1px;
+        right: -1px;
+    }
+    .account_li {
+        margin: 0 14px;
     }
     header {
         height: calc(830px + 3vw);
+        background-image: url('../../img/dummy-2160x2880-Cat.jpg');
+        background-size: 100%;
+    }
+    .line_break {
+        display: none;
     }
     .head_title {
         margin-top: calc(260px + 2vw);
+        font-size: 44px;
+    }
+    .head_descr {
+        font-size: 22px;
     }
 }
