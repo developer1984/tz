@@ -29,8 +29,17 @@
 .containerfooter li a:hover {
     color:#f78164;
 }
+.span a:hover {
+    color:#f78164;
+}
+.col-md-3 li a:hover {
+    color:#f78164;
+}
 span {
     color:#219cd2;
+}
+.col-md-3 li a span:hover {
+     color:#f78164;
 }
 .highlighted {
   font-family: HKGrotesk;
@@ -42,9 +51,7 @@ span {
   letter-spacing: 2px;
   color: #0e2d6e;
 text-transform:uppercase;  
-  font-weight: 800;
-    
-    
+  font-weight: 800; 
     
 }
 .copyright {
@@ -66,20 +73,7 @@ text-transform:uppercase;
   padding-top:8px;
  font-size:24px;
 }
-.fa-facebook {
-  color:#4267b2;
-    
-}
-.fa-youtube {
-  color:red;
-}
-.fa-instagram {
-    color:#fff;
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 )
-}
+
 .empty {
     margin-left:-4px;
     padding:0;
@@ -101,6 +95,15 @@ text-transform:uppercase;
     margin-left:-10px;
   align-items:center;
 }
-.social-media {
+ .social-media img {
     padding-right:15px;
+    height:24px;
+    width:40px;
+}
+.social-media .insta {
+    width:50px;
+}
+.social-media .yt {
+    width:50px;
+    height:35px;
 }
