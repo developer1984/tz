@@ -774,21 +774,21 @@
 
     .news-box-content .news-description{
         max-width: 520px;                
-        margin-top: 15px;            
+        margin-top: 0px;            
     }
 
-    .news-box-content .news-description p,
+       
+    .news-box-content .news-description p{            
+        font-size: 13px;               
+        line-height: 1.75;
+    }
+
     .news-box-content1 .news-description p{        
         font-size: 13px;               
         line-height: 1.75;
-        max-height: 90px
-    }
-
-    .news-icons .icons, 
-    .news-icons1 .icons{            
-        margin-top: 15px;           
-    }
-
+        max-height: 45px;
+    }   
+    
     .news-icons .fa-chevron-circle-right,
     .news-icons1 .fa-chevron-circle-right{        
         margin-right: 16px;        
@@ -819,8 +819,8 @@
 
     .news-box-content1 .news-description{
         max-width: 330px;        
-        max-height: 50px;        
-        margin-top: 15px;           
+        max-height: 0px;        
+        margin-top: 0px;           
     }
 
     .news-box-content3{
@@ -935,22 +935,21 @@
     }
 
     .news-box-content .news-description{
-        max-width: 520px;                
-        margin-top: 15px;            
+        max-width: 520px;                        
     }
 
     .news-box-content .news-description p,
     .news-box-content1 .news-description p{        
         font-size: 13px;               
         line-height: 1.75;
-        max-height: 90px
+        max-height: 90px;
     }
-
-    .news-icons .icons, 
-    .news-icons1 .icons{            
-        margin-top: 15px;           
+    
+    .news-box-content:hover .news-icons .icons, 
+    .news-box-content1:hover .news-icons1 .icons{        
+        margin-top: 10px;                      
     }
-
+    
     .news-icons .fa-chevron-circle-right,
     .news-icons1 .fa-chevron-circle-right{        
         margin-right: 16px;        
@@ -978,11 +977,18 @@
     .news-box-content1 .news-title h2{            
         font-size: 16px;        
     }
+    
+    .news-box-content1:hover .news-title h2{
+        max-height: 40px;    
+    }
 
     .news-box-content1 .news-description{
-        max-width: 270px;        
-        max-height: 50px;        
-        margin-top: 15px;           
+        max-width: 270px;                
+    }
+    
+    .news-box-content1:hover .news-description{    
+        max-height: 50px;
+        margin-top: 15px;
     }
 
     .news-box-content3{
