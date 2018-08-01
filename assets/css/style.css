@@ -124,9 +124,6 @@ header {
         margin-left: calc(-63.8px + 7.9vw);
         justify-content: space-between;
     }
-    .test {
-        width: 100vw;
-    }
     .logo_text, .account_text {
         padding: 0;
         margin: 0;
@@ -208,5 +205,45 @@ header {
     }
     .subpage_active_a {
         color: #f78164;
+    }
+}
+
+@media only screen and (min-width: 997px) {
+    body {
+        width: 1440px
+    }
+    header {
+        height: 875px;
+        background-position-y: -32px;
+    }
+    .main_flex {
+        top: 35px;
+        width: 1322px;
+        margin-left: 50px;
+    }
+    .logo_text {
+        margin-left: 16px;
+    }
+    .add_company {
+        height: 45px;
+        padding: 10px 22px;
+    }
+    .margin_right_li {
+        margin-right: 45px;
+    }
+    .contact_li {
+        padding-right: 30px;
+    }
+    .account_li {
+        margin: 0 30px;
+    }
+    .account_img {
+        margin-right: 9px;
+    }
+    .head_title {
+        margin-top: 250px;
+    }
+    .subpage_nav {
+        padding: 35px 0;
     }
 }
