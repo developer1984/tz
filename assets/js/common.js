@@ -1,115 +1,61 @@
 $(document).ready(function() {
   "use strict";
-  //====================================================================
-  //====================    SEARCH INPUT  ==============================
-  //====================================================================
-  var searchSet = {
-    minChar: 3,
-    delay: 300,
-    listSize: 10
-    // autocomplete: "false"
-  };
 
-  var searchInput = $("input[id=searchInput]");
-  var searchButton = $("#searchButton");
-  var url = "https://jsonplaceholder.typicode.com/todos";
+   var number = 7;
 
-  var inputLength;
-  var inputValue;
-  var sample;
+   $('#searchInput').keyup(function(e) {
+      var search = $(this).val().toLowerCase();
+      var searchlength = $(this).val().length;
+        if (searchlength >= 3) {
+              var data = '?search='+search;
+              $.post('https://coderstrust.codingplatform.pl/application/request.php',{search: search},function(e) {
+                          $('.res').html('');
+                        var response = $.parseJSON(e);
+                        var o = 0;
+                        $.each(response["response"]["channels"],function(key,value) {
+                          if (o === number) {
+                               return false;
+                          }
+                            var title = value.title;
+                            var link = value.link;
+                            $('.res').append('<p><a href="'+link+'">'+title+'</a></p>');
 
-  function clsInput(){
-    $(searchInput).blur(function() {
-      $("#searchForm")[0].reset();
-      $(this).attr("list", "");
-      $("#inputlist").empty();
-      $(this).val("");
-    });
-  }
 
-  $(searchButton).attr("disabled", true);
+                              o++;
+                        })
 
-  //=========================================================================
-  $(searchInput).on("keyup", function(event) {    
+              })
 
-    inputLength = $(this).val().length;
-    inputValue = $(this).val();
-    sample =
-      inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
 
-    if (inputValue != "") {
-      $(searchButton).attr("disabled", false);
-    } else {
-      $(searchButton).attr("disabled", true);
-      $("#searchForm")[0].reset();
-    }
 
-    if (inputLength >= searchSet.minChar) {
-      setTimeout(function() {
+        }
+   });
 
-        $("#inputlist").empty();        
-      
-        var tab = [];
-        var tab2 = [];
-        //====================== get & sort ==========
-       
-        $.get(url, function(data) {
-          $.each(data, function(key, val) {
-            tab.push(val.title);
-          });
-          console.log(data);
 
-          $(tab).each(function(key, val) {
-            var buffer = val.substr(0, inputLength);
-            //  inputValue = small letters
-            //  sample = big first letter
-            if (buffer == inputValue) {
-              tab2.push(val);
-            }
-          });
-          console.log(tab2);
-          tab2.sort();
 
-          $(tab2).each(function(key, val) {
-            if (key < searchSet.listSize) {
-              //=========== ==================  Prompt List ============
-              $("#inputlist").append('<option value="' + val + '"/>');             
-            }
-          });
-        });
-        
-      }, searchSet.delay);
-      //================================= prompt list ON =======================
-      $(this).attr("list", "inputlist");     
 
-    } else {
-      clsInput();
-    }
-    
-    //================================== Clear send without button ==============
-    if (event.which == 13) {
-      $(this).attr("list", "");
-      $("#inputlist").empty();
-      $(this).val("");
-    }
-  });
-  
-  //================================== Submit ============================
-  $(searchButton).bind("click", "keyup", function(e) {
-    // $("#searchForm").submit(function(e) {    prevent fail
-    // $(searchButton ).on('click keyup',function(e) { prevent fail
-    e.preventDefault();
 
-    $.post(url, { sample: sample }, function(data) {
-      console.log(data);
-      $(".res").html("<h2>" + data.sample + "==OK" + "</h2>");      
-      clsInput();
-    });
-  });
 
-  clsInput();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
-//====================================================================
-//====================    SEARCH INPUT END  ==========================
-//====================================================================
