@@ -1,3 +1,68 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wyszukiwarka */
+
+#searchField{
+    width: calc(-31.3px + 82.2vw);
+    margin: calc(55px + 2vw) auto 0;
+}
+input[id=searchInput]:focus{ 
+    box-shadow: none;  
+}  
+#searchButton:focus{ 
+    box-shadow: none;  
+}  
+input[id=searchInput]{ 
+    height: calc(22.4px + 6.85vw);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.input-group-append {
+    display: table
+}
+#searchButton{
+    width: calc(22.4px + 6.85vw);
+    height: calc(22.4px + 6.85vw);
+    border: none;
+    border-radius:  0 5px 5px 0;
+    background-color: #219cd2;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
+}
+#searchButton:hover {
+    cursor: pointer;
+}
+#searchButton .fa-search{
+    font-size: calc(12.4px + 2.3vw);
+    position: relative;
+    top: 2px;
+    left: 1px
+}
+
+@media only screen and (min-width: 768px) {
+    #searchField{
+        width: 600px
+    }
+    input[id=searchInput]{ 
+        height: 75px
+    }
+    #searchButton {
+        width: 75px;
+        height: 75px;
+    }
+    #searchButton .fa-search { 
+        font-size: 30px
+    }
+}
+
+/* nav i header */
+
 .logo_container a, .logo_text, #menu a, .add_company_text {
     transition: color 0.2s
 }
@@ -13,9 +78,12 @@ nav a:hover {
     text-decoration: none;
     color: #f78164;
 }
+.slicknav_menu a:hover {
+    text-decoration: none;
+}
 header {
-    height: calc(460px + 25vw);
-    padding-top: 20px;
+    height: calc(386.4px + 44.85vw);
+    padding-top: 1px;
     background-image: url('../../img/dummy-683x1024-Cat.jpg');
     background-size: 100%;
     background-position-y: calc(-3px - 2vw);
@@ -80,19 +148,32 @@ header {
     vertical-align: middle;
     color: inherit
 }
+.add_company span {
+    display: none;
+}
+.head_container {
+    margin-top: calc(45px + 8vw);
+}
 .head_container p {
     text-align: center;
-    color: #fff
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 .head_title {
-    margin-top: calc(45px + 8vw);
     font-size: calc(24px + 3vw);
     font-weight: 700;
 }
-.head_descr {
+.head_container p.head_descr {
     margin-top: calc(35px + 2vw);
     font-size: calc(17px + 1vw);
     font-weight: 400;
+}
+
+@media only screen and (min-width: 380px) {
+    .add_company span {
+        display: inline;
+    }
 }
 
 @media only screen and (min-width: 997px) {
@@ -104,11 +185,13 @@ header {
     }
     .right_flex, .left_flex {
         display: flex;
-        position: unset;
-        align-items: baseline;
+        position: static;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+       
     }
     .left_flex {
-        align-items: center;
         font-size: 20px;
     }
     .left_flex:hover {
@@ -123,6 +206,7 @@ header {
         width: calc(110px + 84.2vw) ;
         margin-left: calc(-63.8px + 7.9vw);
         justify-content: space-between;
+       
     }
     .logo_text, .account_text {
         padding: 0;
@@ -131,17 +215,17 @@ header {
     .logo_circle {
         width: 40px;
         height: 40px;
-        position: unset;
-        margin-bottom: 3px;
+        position: static;
     }
     .logo_text {
         font-size: inherit;
-        position: unset;
+        left: 0;
+        top: 1px;
         margin-left: calc(-9.9px + 1.8vw);
         padding-bottom: 4px;
     }
     .add_company {
-        position: unset;
+        position: static;
         display: flex;
         font-size: 16px;
         height: calc(30px + 1vw);
@@ -150,6 +234,7 @@ header {
     #menu li {
         text-align: center;
         font-size: 18px;
+        position: relative
     }
     .account_img {
         width: 30px;
@@ -178,20 +263,25 @@ header {
         margin-right: calc(-19.94px + 2vw)
     }
     header {
-        height: calc(830px + 3vw);
+        padding-top: 1px;
+        height: calc(539.8px + 9.05vw);
         background-image: url('../../img/dummy-2160x2880-Cat.jpg');
         background-size: 100%;
+    }
+    .head_container {
+        margin-top: calc(149.7px + 7.75vw);
+        line-height: 1;
     }
     .line_break {
         display: none;
     }
     .head_title {
-        margin-top: calc(220px + 2vw);
         font-size: 44px;
     }
-    .head_descr {
+    .head_container p.head_descr {
         font-size: 22px;
-        margin-top: 25px
+        margin-top: 30px;
+        margin-bottom: 60px;
     }
     .subpage_nav {
         padding: calc(-23.4px + 4.05vw) 0;
@@ -206,14 +296,32 @@ header {
     .subpage_active_a {
         color: #f78164;
     }
+    #menu li.subpage_active_li::before {
+        display: block;
+        width: 110%;
+        height: 3px;
+        content: '';
+        background-color: #f78164;
+        border-radius: 2px;
+        position: absolute;
+        top: calc(5.6px + 4.55vw);
+        left: -5%;
+    }
+    .subpage_add_company:hover {
+        box-shadow: 0 0 4px 4px #ccc;
+    }
+    .subpage_add_company:hover .add_company_text {
+        transition-property: none
+    }
 }
 
 @media only screen and (min-width: 1440px) {
     body {
-        width: 1440px
+        width: 1440px;
+        margin: 0 auto
     }
     header {
-        height: 875px;
+        height: 670px;
         background-position-y: -32px;
     }
     .main_flex {
@@ -240,10 +348,14 @@ header {
     .account_img {
         margin-right: 9px;
     }
-    .head_title {
-        margin-top: 250px;
+    .head_container {
+        margin-top: 261px;
     }
     .subpage_nav {
         padding: 35px 0;
     }
+    #menu li.subpage_active_li::before {
+        top: 71px
+    }
 }
+
