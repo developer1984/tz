@@ -283,20 +283,20 @@ header {
         margin-top: 30px;
         margin-bottom: 60px;
     }
-    .subpage_nav {
+    .subpage_news nav {
         padding: calc(-23.4px + 4.05vw) 0;
         border-bottom: 1px solid #d8d8d8;
     }
-    .subpage_main_flex {
+    .subpage_news .main_flex {
         position: static;
     }
-    .subpage_nav_a {
+    .subpage_news nav .logo_container a, .subpage_news nav #menu a {
         color: #0e2d6e
     }
-    .subpage_active_a {
+    .subpage_news nav #menu li:nth-of-type(2) a {
         color: #f78164;
     }
-    #menu li.subpage_active_li::before {
+    .subpage_news nav #menu li:nth-of-type(2)::before {
         display: block;
         width: 110%;
         height: 3px;
@@ -307,10 +307,15 @@ header {
         top: calc(5.6px + 4.55vw);
         left: -5%;
     }
-    .subpage_add_company:hover {
+    .subpage_news nav #menu a:hover {
+        color: #f78164;
+        transition-property: none;
+        transition: color 0.2s
+    }
+    .subpage_news .add_company:hover {
         box-shadow: 0 0 4px 4px #ccc;
     }
-    .subpage_add_company:hover .add_company_text {
+    .subpage_news .add_company:hover .add_company_text {
         transition-property: none
     }
 }
@@ -351,10 +356,10 @@ header {
     .head_container {
         margin-top: 261px;
     }
-    .subpage_nav {
+    .subpage_news nav {
         padding: 35px 0;
     }
-    #menu li.subpage_active_li::before {
+    .subpage_news nav #menu li:nth-of-type(2)::before {
         top: 71px
     }
 }
