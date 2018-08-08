@@ -1,362 +1,138 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>twoj-zwierzak.pl</title>    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/slicknav.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/news.css">  
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-
-    
-    <script src="assets/js/common.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>prejekt twoje zwierzaki</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+		<link href="http://cargocollective.com/hanken/HK-Grotesk-Open-Source-Font" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="_css/style.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+   crossorigin=""></script>
+		<script type="text/javascript" src="_js/searchsite.js"></script> 
+		
+	</head>
+	
+	
 <body>
-      
-<!--  -----  NAWIGACJA I JUMBOTRON  -----  -->
-      
-    <nav>
-        <div class="main_flex">
-            <div class="logo_container"><a href="#">
-                <div class="left_flex">
-                    <div class="logo_circle"></div>
-                    <p class="logo_text">twoj-zwierzak.pl</p>
-                </div>
-                </a></div>
-            <div class="right_flex">
-                <ul id="menu">
-                    <li class="margin_right_li"><a href="#">Baza firm</a></li>
-                    <li class="margin_right_li"><a href="#">Aktualności</a></li>
-                    <li class="margin_right_li"><a href="#">Artykuły</a></li>
-                    <li class="margin_right_li"><a href="#">O nas</a></li>
-                    <li class="contact_li"><a href="#">Kontakt</a></li>
-                    <li class="account_li"><a href="#">
-                        <img src="img/user-icons-for-IOS.png" class="account_img">
-                        Twoje konto
-                        </a></li>
-                </ul>
-                <div class="add_container"><a href="#">
-                    <div class="add_company">
-                        <div class="add_company_text">Dodaj firmę</div>
-                    </div>
-                    </a></div>
-            </div>
-        </div>
-    </nav>
-  
-    <header>
-        <div class="head_container">
-            
-            <p class="head_title">Wszystko<br class="line_break"> dla<br class="line_break"> Twojego pupila</p>
-            <p class="head_descr">Znajdź najlepsze sklepy<br class="line_break"> i profesjonalne usługi<br class="line_break"> dla swojego zwierzaka.</p>
-             <div id="searchField">
-        <form id="searchForm" method="post"  action="https://jsonplaceholder.typicode.com/posts"   >
-            <div class="input-group ">
-                <input  autocomplete="new-password"  name="sample" id="searchInput" type="search" class="form-control" placeholder="Search (Apps) " >
+<div class="container-fluid  nopadding nomargin staticheight">
+													<!--header (nawigacja logo itp)  -->
+	<div class="container_header">
+		<h1>logo i menu</h1>
+	</div>
+													<!--koniec header (nawigacja logo itp)  -->
+	<div class="row mainContainer nopadding nomargin">
+		<div class="col-xl-6 left_side_container nopadding nomargin"> 	<!--lewa strona  -->
+			<div class="search_container">
+				<img src="_assets/wyszukiwarka.jpg" width="100%">
+			</div>
+			<div class="search_result_container">
+				<div class="search_result">znaleziono 23 wyniki dla: </div>
+				<div class="search_name">szkolenia dla zwierząt <i class="fas close_ico fa-times-circle"></i></i>
+				</div>
+				<div class="clear_fix"></div>
+													<!--box z wynikiem-->
+				<div class="result_box nopadding nomargin">
+					<div class="logo">
+						<img src="_img/logo_psoteria.jpg">
+					</div>
+					<div class="box_information">
+						<div class="name">Psoteria - hotel, groomer, szkolenia</div>
+						<div class="type">Lecznica</div>
+						<div class="adress"><i class="fas ico fa-map-marker-alt"></i>Jagiellońska 15, 74-500 Chojna</div>
+						<div class="city">Chojna</div>
+						<div class="phone_number"><i class="fas ico fa-phone"></i><a href="tel:+48 512 150 6141">512 150 6141</a></div>
+						<div class="website_adress"><i class="fas ico fa-globe-africa"></i><a href="http://sklepzooland.pl">http://sklepzooland.pl</a></div>
+						<div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+					</div>		
+				</div>
+													<!--koniec box z wynikiem-->
+				<div class="special_box_container nomargin nopadding">
+					<div class="special_box">AdSense 300x250</div>
+					<div class="special_box">AdSense 300x250</div>
+				</div>
+													<!--box z wynikiem-->
+				<div class="result_box nopadding nomargin">
+					<div class="logo">
+						<img src="_img/logo_merdu.jpg" alt="logo">
+					</div>
+					<div class="box_information">
+						<div class="name">Merdu-Merdu - hotel dla zwierząt</div>
+						<div class="type">Lecznica</div>
+						<div class="adress"><i class="fas ico fa-map-marker-alt"></i>Nowa Mała Wieś 21, 05-155 Leoncin</div>
+						<div class="city">Leoncin</div>
+						<div class="phone_number"><i class="fas ico fa-phone"></i><a href="tel:+48512 150 6141">512 150 6141</a></div>
+						<div class="website_adress"><i class="fas ico fa-globe-africa"></i><a href="http://merdu-merdu.pl">http://merdu-merdu.pl</a></div>
+						<div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+					</div>		
+				</div>
+													<!--koniec box z wynikiem-->
+													<!--box z wynikiem-->
+				<div class="result_box nopadding nomargin">
+					<div class="logo">
+						<img src="_img/logo_borsuk.jpg" alt="logo">
+					</div>
+					<div class="box_information">
+						<div class="name">Gabinet Weterynaryjny BORSUK lek. wet. Aleksandyra Rusiecka</div>
+						<div class="type">Lecznica</div>
+						<div class="adress"><i class="fas ico fa-map-marker-alt"></i>Jagiellońska 15, 74-500 Chojna</div>
+						<div class="city">Chojna</div>
+						<div class="phone_number"><i class="fas ico fa-phone"></i><a href="tel:+48 512 150 6141">512 150 6141</a></div>
+						<div class="website_adress"><i class="fas ico fa-globe-africa"></i><a href="http://sklepzooland.pl">http://sklepzooland.pl</a></div>
+						<div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+					</div>		
+				</div>
+													<!--koniec box z wynikiem-->
+													<!--box z wynikiem-->
+				<div class="result_box nopadding nomargin">
+					<div class="logo">
+						<img src="_img/logo_dlazwierzaka.jpg" alt="logo">
+					</div>
+					<div class="box_information">
+						<div class="name">dlaZwierzaka.eu</div>
+						<div class="type">Lecznica</div>
+						<div class="adress"><i class="fas ico fa-map-marker-alt"></i>Szkolna 2, 23-100 Bychawa, Polska</div>
+						<div class="city">Bychowa</div>
+						<div class="phone_number"><i class="fas ico fa-phone"></i><a href="tel:81 5 258 329">81 5 258 329</a></div>
+						<div class="website_adress"><i class="fas ico fa-globe-africa"></i><a href="https://dlazwierzaka.eu/">https://dlazwierzaka.eu</a></div>
+						<div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+					</div>		
+				</div>
+													<!--box z wynikiem-->
+													<!-- ilość podstron-->
+				<div class="next_result_number nomargin nopadding">
+					<div class="prev_site"><i class="fas fa-chevron-left"></i></div>
+					<div class="site_box_number">1</div>
+					<div class="site_box_number active_select">2</div>
+					<div class="site_box_number">3</div>
+					<div class="site_box_number">4</div>
+					<div class="site_box_number">5</div>
+					<div class="next_site"><i class="fas fa-chevron-right"></i></div>
+				</div>
+			<footer>
+			© 2018 www.twoj-zwierzak.pl 
+			</footer>
+			</div>
+		</div>															<!--koniec lewa strona  -->
+		<div class="col-xl-6 right_side_container nomargin nopadding"> 	<!--prawa strona  -->
+			<div id="mapid">
+			</div>
+		</div>															<!--koniec prawa strona  -->
+	
+	</div>
+		
+</div>
 
-                <div class="input-group-append">
-                    <button type=”submit” value=”search” id="searchButton" class="btn btn-primary">
-                        <i class="fas fa-search "></i>
-                        <!-- &#128269; -->
-                    </button>
-                    <datalist id="inputlist"></datalist>
-                </div>
-            </div>
-        </form>    
-        
-        
-        <div class="res"></div>
 
-    </div>
 
-        </div>
-    </header>
-      
-<!--  -----  SEKCJA AKTUALNOŚCI  -----  -->
-       
-    <section class="news container-fluid" id="news">
-       
-        <div class="row row-news">
-            <div class="col-lg-9 col-md-9 col-sm-7 col-xs-6 topic-news">
-                <h3>Aktualności</h3>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-5 news-search">               
-                <a href="see-all">
-                    <h6>ZOBACZ WSZYSTKIE</h6>                                 
-                    <i class="fas fa-chevron-circle-right"></i>               
-                </a>
-            </div>
-                        
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 news-wave">
-                <div class="wave1"></div>
-                <div class="wave2"></div>
-                <div class="wave3"></div>
-                <div class="wave4"></div>
-                <div class="wave5"></div>
-                <div class="wave6"></div>
-                <div class="wave7"></div>                
-            </div>            
-            
-            <div class="col-lg-8 col-md-12 col-sm-12 news-box11 box0">       
-                <img data-object-fit="cover" src="assets/img/box011.jpg" class="img-box11 img-fluid">
-                <a href="#">
-                <div class="news-box-content">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Warszawski Dzień Zwierząt zaprasza miłośników zwierząt juz 19 maja!</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons">
-                       <div class="icons">
-                           <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>                    
-                </div>                
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 news-box12 box0">               
-                <img data-object-fit="cover" src="assets/img/box012.jpg" class="img-box12 img-fluid">     
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Pieska Imprezka w Olsztynie! Już 20 maja!</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>           
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 news-box21 box0">
-                <img data-object-fit="cover" src="assets/img/box021.jpg" class="img-box21 img-fluid">
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Strefa Zwierzaka na Slow Weekend w Warszawie. 19-20 maja</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>  
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 news-box22 box0">               
-                <img data-object-fit="cover" src="assets/img/box022.jpg" class="img-box22 img-fluid">
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Międzynarodowe Targi Zoologiczne Animal Baltic- 22 kwietnia Gdańsk</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>  
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 news-box23 box0">               
-                <img data-object-fit="cover" src="assets/img/box023.jpg" class="img-box23 img-fluid">
-                <a href="#">
-                <div class="news-box-content1 news-box-content3">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Psim Targiem we Wrocławiu: why NOT!</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>  
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 news-box31 box0">
-                <img data-object-fit="cover" src="assets/img/box031.jpg" class="img-box31 img-fluid">
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Pogodnej majówki życzy twoj-zwierzak.pl</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 col-sm-6 news-box32 box0">               
-                <img data-object-fit="cover" src="assets/img/box032.jpg" class="img-box32 img-fluid">
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Targi dla zwierzaków 3! 24.03. Warszawa ul.Bracka 25</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 col-sm-6 news-box33 box0">               
-                <img data-object-fit="cover" src="assets/img/box033.jpg" class="img-box33 img-fluid">
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Water & Dragon Polskie Centrum Egzotyczne</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 col-sm-6 news-box34 box0">               
-                <img data-object-fit="cover" src="assets/img/box034.jpg" class="img-box34 img-fluid">
-                <a href="#">
-                <div class="news-box-content1">
-                    <div class="news-date">
-                        <h6>24.07.2018</h6>
-                    </div>
-                    <div class="news-title">
-                        <h2>Targi dla Zwierzaków 2 w Warszawie.</h2>       
-                    </div>
-                    <div class="news-description">
-                        <p>To już trzecia impreza pt. Warszawski Dzień Zwierząt organizowana przez Schronisko na Paluchu. Spotkanie odbędzie się 19 maja w godz. 12-18 na Agrykoli. A w nim m.in.: konkursy z nagrodami, pokaz psów pracujących, pokaz psich sportów, sztuczek i Dog frisbee, pokaz nosework...</p>
-                    </div>
-                    <div class="news-icons1">
-                        <div class="icons">
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                            <i class="fas fa-comment-dots"></i>
-                            <span class="news-comment-number">22</span>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>        
-        
-    </section>
-                                               
-<!--  -----  OSTATNIO DODANE FIRMY  -----  -->
-                                               
-    <section class="company">
 
-    </section>
-                                               
-<!--  -----  NAJNOWSZE ARTYKUŁY  -----  -->
-
-    <section class="last-article">
-
-    </section>
-                                                
-<!--  -----  STOPKA  -----  -->
-                                                
-    <footer>
-
-    </footer>
-
-                                                
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/objectFitPolyfill.basic.min.js"></script>        
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
