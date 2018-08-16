@@ -1,115 +1,55 @@
 $(document).ready(function() {
   "use strict";
-  //====================================================================
-  //====================    SEARCH INPUT  ==============================
-  //====================================================================
-  var searchSet = {
-    minChar: 3,
-    delay: 300,
-    listSize: 10
-    // autocomplete: "false"
-  };
 
-  var searchInput = $("input[id=searchInput]");
-  var searchButton = $("#searchButton");
-  var url = "https://jsonplaceholder.typicode.com/todos";
+  var listLenght = 5;
+  var delayPost = 300;
+  var minChar = 3;
 
-  var inputLength;
-  var inputValue;
-  var sample;
-
-  function clsInput(){
-    $(searchInput).blur(function() {
-      $("#searchForm")[0].reset();
-      $(this).attr("list", "");
-      $("#inputlist").empty();
-      $(this).val("");
-    });
+  function clsInput_and_list() {
+    $("#searchInput").val("");   
+    $("#res").empty();
   }
 
-  $(searchButton).attr("disabled", true);
+  $("#searchInput").on("keyup click", function(event) {
+  // $("#searchInput").bind("keyup", " click", function(event) {
+    event.preventDefault();
+    var search = $(this)
+      .val()
+      .toLowerCase();
+    var searchlength = $(this).val().length;
 
-  //=========================================================================
-  $(searchInput).on("keyup", function(event) {    
+    setTimeout(function() {
+      if (searchlength >= minChar) {
+        // var data = "?search=" + search;
+        $.post(
+          "https://coderstrust.codingplatform.pl/application/request.php",
+          { search: search },
+          function(data) {
+            $("#res").html("");
+            var response = $.parseJSON(data);
+            $.each(response["response"]["channels"], function(key, value) {
+              if (key === listLenght) {
+                return false;
+              } else {
+                var title = value.title;
+                var link = value.link;
+                $("#res").append('<p><a target="_blank" href="'+link +'">'+title +"</a></p>");                
+              }
+            });
+          }
+        );
 
-    inputLength = $(this).val().length;
-    inputValue = $(this).val();
-    sample =
-      inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
-
-    if (inputValue != "") {
-      $(searchButton).attr("disabled", false);
-    } else {
-      $(searchButton).attr("disabled", true);
-      $("#searchForm")[0].reset();
-    }
-
-    if (inputLength >= searchSet.minChar) {
-      setTimeout(function() {
-
-        $("#inputlist").empty();        
-      
-        var tab = [];
-        var tab2 = [];
-        //====================== get & sort ==========
-       
-        $.get(url, function(data) {
-          $.each(data, function(key, val) {
-            tab.push(val.title);
-          });
-          console.log(data);
-
-          $(tab).each(function(key, val) {
-            var buffer = val.substr(0, inputLength);
-            //  inputValue = small letters
-            //  sample = big first letter
-            if (buffer == inputValue) {
-              tab2.push(val);
-            }
-          });
-          console.log(tab2);
-          tab2.sort();
-
-          $(tab2).each(function(key, val) {
-            if (key < searchSet.listSize) {
-              //=========== ==================  Prompt List ============
-              $("#inputlist").append('<option value="' + val + '"/>');             
-            }
-          });
-        });
+      } else if (searchlength < minChar) {      
+        $("#res").empty();
+      }
+    }, delayPost);    
         
-      }, searchSet.delay);
-      //================================= prompt list ON =======================
-      $(this).attr("list", "inputlist");     
-
-    } else {
-      clsInput();
-    }
-    
-    //================================== Clear send without button ==============
-    if (event.which == 13) {
-      $(this).attr("list", "");
-      $("#inputlist").empty();
-      $(this).val("");
-    }
-  });
-  
-  //================================== Submit ============================
-  $(searchButton).bind("click", "keyup", function(e) {
-    // $("#searchForm").submit(function(e) {    prevent fail
-    // $(searchButton ).on('click keyup',function(e) { prevent fail
-    e.preventDefault();
-
-    $.post(url, { sample: sample }, function(data) {
-      console.log(data);
-      $(".res").html("<h2>" + data.sample + "==OK" + "</h2>");      
-      clsInput();
-    });
   });
 
-  clsInput();
-
+  // ===opoznienie  blura wysylajac z listy 
+  $("#searchInput").blur(function() {
+    setTimeout(function() {
+      clsInput_and_list();
+    }, 200);
+  });
 });
-//====================================================================
-//====================    SEARCH INPUT END  ==========================
-//====================================================================

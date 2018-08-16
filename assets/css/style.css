@@ -1,281 +1,265 @@
-
-#searchField{
-  width: 525px ;  
-  margin: 20px;
+/* -----  RWD skalowanie inputa -----   */
+.typeahead__container {
+  font: 1.2rem;
 }
-input[id=searchInput]:focus{ 
-  box-shadow: none;  
-}  
-#searchButton:focus{ 
-  box-shadow: none;  
-}  
-input[id=searchInput]{ 
-  height: 75px;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: 500;  
-  /* color: #2d2d2d; */
-  /* background-color: #ffffff;   */
-}  
-#searchButton{
-  width: 75px;
-  height: 75px;
-  border: none;
-  border-radius:  0 5px 5px 0;
-  background-color: #219cd2;
-}
-#searchButton .fa-search{ 
-  font-size: 30px
+/* ----- szerokosc pola ----- */
+.searchbox {
+  margin: 0 auto;
+  width: 525px;
 }
 
-
-.logo_container a, .logo_text, #menu a, .add_company_text {
-    transition: color 0.2s
+.logo_container a,
+.logo_text,
+#menu a,
+.add_company_text {
+  transition: color 0.2s;
 }
-nav, header {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
+nav,
+header {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
 }
 nav a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 nav a:hover {
-    text-decoration: none;
-    color: #f78164;
+  text-decoration: none;
+  color: #f78164;
 }
 header {
-    height: calc(460px + 25vw);
-    padding-top: 20px;
-    background-image: url('../../img/dummy-683x1024-Cat.jpg');
-    background-size: 100%;
-    background-position-y: calc(-3px - 2vw);
+  height: calc(460px + 25vw);
+  padding-top: 20px;
+  background-image: url("../../img/dummy-683x1024-Cat.jpg");
+  background-size: 100%;
+  background-position-y: calc(-3px - 2vw);
 }
 #menu {
-    display: none;
+  display: none;
 }
 .left_flex {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: calc(13px + 1vw);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: calc(13px + 1vw);
 }
 .left_flex:hover {
-    color: #f78164;
-    font-size: calc(14px + 1vw);
+  color: #f78164;
+  font-size: calc(14px + 1vw);
 }
 .logo_circle {
-    width: calc(27px + 1.5vw);
-    height: calc(27px + 1.5vw);
-    background-color: #ecad3d;
-    color: #ecad3d;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    top: 15px;
-    left: calc(7px + 1vw);
-    text-align: center
+  width: calc(27px + 1.5vw);
+  height: calc(27px + 1.5vw);
+  background-color: #ecad3d;
+  color: #ecad3d;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  left: calc(7px + 1vw);
+  text-align: center;
 }
 .logo_text {
-    font-family: 'Poppins', sans-serif;
-    font-size: inherit;
-    display: inline-block;
-    position: relative;
-    top: calc(5px - 0.33vw);
-    left: calc(8px + 1.8vw);
-    transition: font-size 0.2s;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  display: inline-block;
+  position: relative;
+  top: calc(5px - 0.33vw);
+  left: calc(8px + 1.8vw);
+  transition: font-size 0.2s;
 }
 .account_img {
-    width: calc(30px + 1vw);
-    position: relative;
-    top: -2px;
+  width: calc(30px + 1vw);
+  position: relative;
+  top: -2px;
 }
 .add_company {
-    padding: 0 calc(7px + 1vw);
-    height: calc(27px + 1.5vw);
-    position: absolute;
-    top: 15px;
-    right: calc(48.5px + 3.5vw);
-    font-size: calc(10px + 1vw);
-    font-weight: 700;
-    background-color: #f78164;
-    border-radius: 3px;
-    display: table;
+  padding: 0 calc(7px + 1vw);
+  height: calc(27px + 1.5vw);
+  position: absolute;
+  top: 15px;
+  right: calc(48.5px + 3.5vw);
+  font-size: calc(10px + 1vw);
+  font-weight: 700;
+  background-color: #f78164;
+  border-radius: 3px;
+  display: table;
 }
 .add_company:hover {
-    background-color: #fff;
-    transition: background-color 0.2s;
+  background-color: #fff;
+  transition: background-color 0.2s;
 }
 .add_company_text {
-    display: table-cell;
-    vertical-align: middle;
-    color: inherit
+  display: table-cell;
+  vertical-align: middle;
+  color: inherit;
 }
 .head_container p {
-    text-align: center;
-    color: #fff
+  text-align: center;
+  color: #fff;
 }
 .head_title {
-    margin-top: calc(45px + 8vw);
-    font-size: calc(24px + 3vw);
-    font-weight: 700;
+  margin-top: calc(45px + 8vw);
+  font-size: calc(24px + 3vw);
+  font-weight: 700;
 }
 .head_descr {
-    margin-top: calc(35px + 2vw);
-    font-size: calc(17px + 1vw);
-    font-weight: 400;
+  margin-top: calc(35px + 2vw);
+  font-size: calc(17px + 1vw);
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 997px) {
-    #menu {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    .right_flex, .left_flex {
-        display: flex;
-        position: unset;
-        align-items: baseline;
-    }
-    .left_flex {
-        align-items: center;
-        font-size: 20px;
-    }
-    .left_flex:hover {
-        font-size: 21px;
-    }
-    .main_flex {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: calc(-23.4px + 4.05vw);
-        left: 0;
-        width: calc(110px + 84.2vw) ;
-        margin-left: calc(-63.8px + 7.9vw);
-        justify-content: space-between;
-    }
-    .logo_text, .account_text {
-        padding: 0;
-        margin: 0;
-    }
-    .logo_circle {
-        width: 40px;
-        height: 40px;
-        position: unset;
-        margin-bottom: 3px;
-    }
-    .logo_text {
-        font-size: inherit;
-        position: unset;
-        margin-left: calc(-9.9px + 1.8vw);
-        padding-bottom: 4px;
-    }
-    .add_company {
-        position: unset;
-        display: flex;
-        font-size: 16px;
-        height: calc(30px + 1vw);
-        padding: calc(3px + 0.5vw) calc(15px + 0.5vw);
-    }
-    #menu li {
-        text-align: center;
-        font-size: 18px;
-    }
-    .account_img {
-        width: 30px;
-    }
-    .margin_right_li {
-        margin-right: calc(-49.3px + 6.55vw);
-    }
-    .contact_li {
-        padding-right: calc(-21.9px + 3.6vw);
-        position: relative;
-    }
-    .contact_li::after {
-        display: inline-block;
-        content: '';
-        height: 31px;
-        border-right: 1px solid #d8d8d8;
-        position: absolute;
-        top: -2px;
-        right: -1px;
-    }
-    .account_li {
-        margin: 0 calc(-21.9px + 3.6vw);
-    }
-    .account_img {
-        display: inline-block;
-        margin-right: calc(-19.94px + 2vw)
-    }
-    header {
-        height: calc(830px + 3vw);
-        background-image: url('../../img/dummy-2160x2880-Cat.jpg');
-        background-size: 100%;
-    }
-    .line_break {
-        display: none;
-    }
-    .head_title {
-        margin-top: calc(220px + 2vw);
-        font-size: 44px;
-    }
-    .head_descr {
-        font-size: 22px;
-        margin-top: 25px
-    }
-    .subpage_nav {
-        padding: calc(-23.4px + 4.05vw) 0;
-        border-bottom: 1px solid #d8d8d8;
-    }
-    .subpage_main_flex {
-        position: static;
-    }
-    .subpage_nav_a {
-        color: #0e2d6e
-    }
-    .subpage_active_a {
-        color: #f78164;
-    }
+  #menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .right_flex,
+  .left_flex {
+    display: flex;
+    position: unset;
+    align-items: baseline;
+  }
+  .left_flex {
+    align-items: center;
+    font-size: 20px;
+  }
+  .left_flex:hover {
+    font-size: 21px;
+  }
+  .main_flex {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(-23.4px + 4.05vw);
+    left: 0;
+    width: calc(110px + 84.2vw);
+    margin-left: calc(-63.8px + 7.9vw);
+    justify-content: space-between;
+  }
+  .logo_text,
+  .account_text {
+    padding: 0;
+    margin: 0;
+  }
+  .logo_circle {
+    width: 40px;
+    height: 40px;
+    position: unset;
+    margin-bottom: 3px;
+  }
+  .logo_text {
+    font-size: inherit;
+    position: unset;
+    margin-left: calc(-9.9px + 1.8vw);
+    padding-bottom: 4px;
+  }
+  .add_company {
+    position: unset;
+    display: flex;
+    font-size: 16px;
+    height: calc(30px + 1vw);
+    padding: calc(3px + 0.5vw) calc(15px + 0.5vw);
+  }
+  #menu li {
+    text-align: center;
+    font-size: 18px;
+  }
+  .account_img {
+    width: 30px;
+  }
+  .margin_right_li {
+    margin-right: calc(-49.3px + 6.55vw);
+  }
+  .contact_li {
+    padding-right: calc(-21.9px + 3.6vw);
+    position: relative;
+  }
+  .contact_li::after {
+    display: inline-block;
+    content: "";
+    height: 31px;
+    border-right: 1px solid #d8d8d8;
+    position: absolute;
+    top: -2px;
+    right: -1px;
+  }
+  .account_li {
+    margin: 0 calc(-21.9px + 3.6vw);
+  }
+  .account_img {
+    display: inline-block;
+    margin-right: calc(-19.94px + 2vw);
+  }
+  header {
+    height: calc(830px + 3vw);
+    background-image: url("../../img/dummy-2160x2880-Cat.jpg");
+    background-size: 100%;
+  }
+  .line_break {
+    display: none;
+  }
+  .head_title {
+    margin-top: calc(220px + 2vw);
+    font-size: 44px;
+  }
+  .head_descr {
+    font-size: 22px;
+    margin-top: 25px;
+  }
+  .subpage_nav {
+    padding: calc(-23.4px + 4.05vw) 0;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .subpage_main_flex {
+    position: static;
+  }
+  .subpage_nav_a {
+    color: #0e2d6e;
+  }
+  .subpage_active_a {
+    color: #f78164;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-    body {
-        width: 1440px
-    }
-    header {
-        height: 875px;
-        background-position-y: -32px;
-    }
-    .main_flex {
-        top: 35px;
-        width: 1322px;
-        margin-left: 50px;
-    }
-    .logo_text {
-        margin-left: 16px;
-    }
-    .add_company {
-        height: 45px;
-        padding: 10px 22px;
-    }
-    .margin_right_li {
-        margin-right: 45px;
-    }
-    .contact_li {
-        padding-right: 30px;
-    }
-    .account_li {
-        margin: 0 30px;
-    }
-    .account_img {
-        margin-right: 9px;
-    }
-    .head_title {
-        margin-top: 250px;
-    }
-    .subpage_nav {
-        padding: 35px 0;
-    }
+  body {
+    width: 1440px;
+  }
+  header {
+    height: 875px;
+    background-position-y: -32px;
+  }
+  .main_flex {
+    top: 35px;
+    width: 1322px;
+    margin-left: 50px;
+  }
+  .logo_text {
+    margin-left: 16px;
+  }
+  .add_company {
+    height: 45px;
+    padding: 10px 22px;
+  }
+  .margin_right_li {
+    margin-right: 45px;
+  }
+  .contact_li {
+    padding-right: 30px;
+  }
+  .account_li {
+    margin: 0 30px;
+  }
+  .account_img {
+    margin-right: 9px;
+  }
+  .head_title {
+    margin-top: 250px;
+  }
+  .subpage_nav {
+    padding: 35px 0;
+  }
 }
-
